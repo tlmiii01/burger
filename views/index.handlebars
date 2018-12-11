@@ -1,8 +1,17 @@
 <div class="container">
-    <h1 class="text-center">Burgers!</h1>
     <div class="row">
+        <div class="mx-auto my-2">
+            <img src="./assets/img/burger_sandwich_PNG4160.png" alt="Burger Picture">
+        </div>
+    </div>
+    <div class="row">
+        <div class="mx-auto my-3">
+            <h1 class="display-3">Burgers!</h1>
+        </div>
+    </div>
+    <div class="row mt-4">
         <div class="col-md-6">
-            <h2>Burgers not devoured!</h2>   
+            <h2 class="mb-2">Burgers not devoured!</h2>   
                 {{#each burgers}}
                     {{#unless devoured}}
                         {{> burger/burger-block devoured=false}}
@@ -11,7 +20,7 @@
         </div>
 
         <div class="col-md-6">
-            <h2>Burgers that have been devoured!</h2>
+            <h2 class="mb-2">Burgers that have been devoured!</h2>
                 {{#each burgers}}
                     {{#if devoured}}
                         {{> burger/burger-block devoured=true}}
@@ -19,15 +28,15 @@
                 {{/each}}
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3 border border-dark">
             <h2 class="text-center">Add a Burger</h2>
-            <form class="create-form">
+            <form class="create-form mt-3">
                 <div class="form-group">
                     <label for="burgerAdd">Burger Name:</label>
                     <input type="text" id="burgerAdd" name="burger_name" class="w-75">
                 </div>
-                <button type="submit" id="submitButton">Add Burger</button>
+                <button type="submit" id="submitButton" class="mb-2">Add Burger</button>
             </form>
         </div>
     </div>
